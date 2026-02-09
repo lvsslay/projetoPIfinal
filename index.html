@@ -1,0 +1,430 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+    <head>
+        <title>O Estado Livre do Congo</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+        
+        <style>
+            #quiz-container {
+                background-color: #f4f4f4;
+                border: 1px solid #dcdcdc;
+                padding: 40px;
+                color: #000;
+                margin-top: 2rem;
+            }
+            
+            #quiz-box {
+                background: #ffffff;
+                border: 1px solid #333;
+                box-shadow: 5px 5px 0px rgba(0,0,0,0.1);
+                max-width: 800px;
+                margin: 0 auto;
+                padding: 40px;
+            }
+            
+            #quiz-box h3 {
+                color: #000;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                border-bottom: 2px solid #000;
+                padding-bottom: 10px;
+                margin-bottom: 30px;
+                font-family: "Georgia", serif;
+            }
+            
+            #barra-container {
+                background: #e0e0e0;
+                height: 4px;
+                margin-bottom: 30px;
+            }
+            
+            #barra-progresso {
+                background: #000000;
+                height: 100%;
+                width: 0%;
+                transition: width 0.4s ease;
+            }
+            
+            #pergunta {
+                color: #1a1a1a;
+                font-size: 1.3rem;
+                line-height: 1.6;
+                margin-bottom: 30px;
+                font-family: "Georgia", serif;
+            }
+            
+            .opcao-quiz {
+                background: #ffffff;
+                border: 1px solid #555;
+                border-radius: 0px;
+                padding: 15px 20px;
+                width: 100%;
+                text-align: left;
+                font-size: 1rem;
+                color: #333;
+                margin-bottom: 10px;
+                cursor: pointer;
+                transition: all 0.2s ease;
+            }
+            
+            .opcao-quiz:hover {
+                background-color: #f0f0f0;
+                border-color: #000;
+                color: #000;
+            }
+            
+            .opcao-quiz:disabled {
+                cursor: default;
+            }
+            
+            #resultado {
+                border: 1px solid #000;
+                padding: 25px;
+                margin-top: 30px;
+                background-color: #fff;
+                color: #000;
+                display: none;
+            }
+            
+            .botao-acao {
+                background: #000000;
+                color: #ffffff !important;
+                border: none;
+                text-transform: uppercase;
+                padding: 10px 20px;
+                margin-top: 15px;
+                cursor: pointer;
+                font-weight: bold;
+            }
+            
+            .botao-acao:hover {
+                background: #333333;
+            }
+            
+            #placar-final {
+                display: none;
+                text-align: center;
+            }
+            
+            @media screen and (max-width: 736px) {
+                #quiz-box { padding: 20px; }
+            }
+        </style>
+    </head>
+    <body class="is-preload">
+
+        <div id="wrapper" class="fade-in">
+
+                <div id="intro">
+                        <h1>O Holocausto<br />
+                        Esquecido</h1>
+                        <p>Uma análise histórica sobre a exploração privada do Rei Leopoldo II (1885–1908) e o Estado Livre do Congo.</p>
+                        <ul class="actions">
+                            <li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continuar</a></li>
+                        </ul>
+                    </div>
+
+                <header id="header">
+                        <a href="index.html" class="logo">Historia do Congo Belga</a>
+                    </header>
+
+                <nav id="nav">
+                        <ul class="links">
+                            <li class="active"><a href="index.html">Capa</a></li>
+                            <li><a href="#borracha" class="scrolly">A Borracha</a></li>
+                            <li><a href="#maos" class="scrolly">O Terror</a></li>
+                            <li><a href="#casement" class="scrolly">Denúncia</a></li>
+                        </ul>
+                        <ul class="icons">
+                            <li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+                        </ul>
+                    </nav>
+
+                <div id="main">
+
+                        <article class="post featured">
+                                <header class="major">
+                                    <span class="date">1885 - 1908</span>
+                                    <h2><a href="#">A Propriedade Privada<br />
+                                    de um Rei</a></h2>
+                                    <p>O Estado Livre do Congo não era uma colônia belga, mas uma propriedade pessoal do Rei Leopoldo II. Sob o pretexto de uma missão humanitária, ele instaurou um regime de trabalhos forçados para a extração de borracha e marfim, resultando na morte de milhões de congoleses.</p>
+                                </header>
+                                <a href="#" class="image main"><img src="images/leopoldo.jpg" alt="Rei Leopoldo II" style="width:100%; height:500px; object-fit:cover; object-position: top;" /></a>
+                                <ul class="actions special">
+                                    <li><a href="#borracha" class="button large scrolly">Ver Detalhes</a></li>
+                                </ul>
+                            </article>
+
+                        <section class="posts">
+                                
+                                <article id="borracha">
+                                    <header>
+                                        <span class="date">Economia</span>
+                                        <h2><a href="#">O Sangue da<br />
+                                        Borracha</a></h2>
+                                    </header>
+                                    <a href="#" class="image fit"><img src="images/borracha.jpg" alt="" style="width:100%; height:300px; object-fit:cover;" /></a>
+                                    <p>Com a invenção do pneu pneumático, a borracha tornou-se o recurso mais valioso do mundo. Aldeias inteiras eram obrigadas a cumprir cotas de coleta sob pena de morte ou sequestro de mulheres e crianças.</p>
+                                    <ul class="actions special">
+                                        <li><a href="#" class="button">Ler Mais</a></li>
+                                    </ul>
+                                </article>
+                                
+                                <article id="maos">
+                                    <header>
+                                        <span class="date">Violência</span>
+                                        <h2><a href="#">As Mãos<br />
+                                        Cortadas</a></h2>
+                                    </header>
+                                    <a href="#" class="image fit"><img src="images/maos.jpg" alt="" style="width:100%; height:300px; object-fit:cover;" /></a>
+                                    <p>Para economizar munição, a <i>Force Publique</i> exigia uma mão decepada para cada bala gasta. Isso gerou um comércio macabro de membros humanos para justificar o uso de armas aos oficiais europeus.</p>
+                                    <ul class="actions special">
+                                        <li><a href="#" class="button">Ler Mais</a></li>
+                                    </ul>
+                                </article>
+                                
+                                <article id="casement">
+                                    <header>
+                                        <span class="date">Denúncia</span>
+                                        <h2><a href="#">O Relatório<br />
+                                        Casement</a></h2>
+                                    </header>
+                                    <a href="#" class="image fit"><img src="images/casement.jpg" alt="" style="width:100%; height:300px; object-fit:cover;" /></a>
+                                    <p>Roger Casement e E.D. Morel expuseram as atrocidades ao mundo. O relatório de 1904, com fotos chocantes de missionários, forçou Leopoldo II a ceder o Congo ao governo da Bélgica.</p>
+                                    <ul class="actions special">
+                                        <li><a href="#" class="button">Ler Mais</a></li>
+                                    </ul>
+                                </article>
+                                
+                                <article id="independencia">
+                                    <header>
+                                        <span class="date">1960</span>
+                                        <h2><a href="#">Lumumba e a<br />
+                                        Liberdade</a></h2>
+                                    </header>
+                                    <a href="#" class="image fit"><img src="images/lumumba.jpeg" alt="" style="width:100%; height:300px; object-fit:cover; object-position: top;" /></a>
+                                    <p>Em 1960, Patrice Lumumba declarou a independência. Rompendo o protocolo, denunciou em discurso a "humilhante escravidão" sofrida pelo povo congolês sob o domínio belga.</p>
+                                    <ul class="actions special">
+                                        <li><a href="#" class="button">Ler Mais</a></li>
+                                    </ul>
+                                </article>
+
+                            </section>
+
+                        <footer>
+                                <div id="quiz-container">
+                                    <div id="quiz-box">
+                                        <h3>Avaliação Histórica</h3>
+                                        
+                                        <div style="font-size: 0.9rem; margin-bottom: 5px;">QUESTÃO <span id="numero-questao">1</span>/5</div>
+                                        <div id="barra-container">
+                                            <div id="barra-progresso"></div>
+                                        </div>
+                                        
+                                        <div id="conteudo-quiz">
+                                            <p id="pergunta">Carregando pergunta...</p>
+                                            <div id="opcoes-quiz">
+                                                </div>
+                                        </div>
+                                        
+                                        <div id="resultado"></div>
+                                        
+                                        <div id="placar-final">
+                                            <h2>RELATÓRIO FINAL</h2>
+                                            <p style="font-size: 3em; font-weight: bold; margin: 20px 0;"><span id="pontuacao-final">0</span>/5</p>
+                                            <p id="mensagem-final"></p>
+                                            <button onclick="reiniciarQuizCompleto()" class="botao-acao">Reiniciar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </footer>
+
+                    </div>
+
+                <footer id="footer">
+                        <section>
+                            <h3>Dados do Projeto</h3>
+                            <p>Este site foi cirado a partir do projeto final da disciplina de Projeto Integrador, a materia escolhida foi historia e o conteudo aborda
+                                acontecimentos do congo-belga que ocorreram no pais do congo no continente africano
+                            </p>
+                            <h3>Tecnologias</h3>
+                            <p>HTML5, CSS3, JavaScript.</p>
+                        </section>
+                        <section class="split contact">
+                            <section class="alt">
+                                <h3>Aluno 1</h3>
+                                <p>Isaac Rafael Matias de Lima Santino<br />
+                                Matrícula: 20231064010001</p>
+                                <h3>Aluna 2 </h3>
+                                <p>Layanny Vitoria Dos Santos Silva<br />
+                                Matrícula: 20231064010004</p>
+                            </section>
+                            <section>
+                                <h3>Curso</h3>
+                                <p><a href="#">Informática - IFRN</a></p>
+                            </section>
+                            <section>
+                                <h3>Disciplina</h3>
+                                <p><a href="#"> Projeto Integrador e História</a></p>
+                            </section>
+                        </section>
+                    </footer>
+
+                <div id="copyright">
+                        <ul><li>&copy; IFRN</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+                    </div>
+
+            </div>
+
+        <script src="assets/js/jquery.min.js"></script>
+            <script src="assets/js/jquery.scrollex.min.js"></script>
+            <script src="assets/js/jquery.scrolly.min.js"></script>
+            <script src="assets/js/browser.min.js"></script>
+            <script src="assets/js/breakpoints.min.js"></script>
+            <script src="assets/js/util.js"></script>
+            <script src="assets/js/main.js"></script>
+
+            <script>
+                const questoes = [
+                    {
+                        pergunta: "Qual exército privado impunha o terror nas aldeias do Congo?",
+                        opcoes: ["A) Force Publique", "B) Guarda Real Belga", "C) Exército Colonial Britânico", "D) Legião Estrangeira"],
+                        correta: 'a',
+                        explicacao: "A Force Publique era o exército mercenário privado de Leopoldo II que impunha o terror."
+                    },
+                    {
+                        pergunta: "Qual recurso natural era o principal produto explorado no Congo?",
+                        opcoes: ["A) Ouro", "B) Diamantes", "C) Borracha", "D) Petróleo"],
+                        correta: 'c',
+                        explicacao: "A borracha era o recurso mais valioso devido à invenção do pneu pneumático."
+                    },
+                    {
+                        pergunta: "O que era cortado dos congoleses como forma de punição?",
+                        opcoes: ["A) Orelhas", "B) Mãos", "C) Pés", "D) Dedos"],
+                        correta: 'b',
+                        explicacao: "As mãos eram cortadas para economizar munição e provar que as balas não foram desperdiçadas."
+                    },
+                    {
+                        pergunta: "Quem escreveu o relatório de 1904 que expôs as atrocidades ao mundo?",
+                        opcoes: ["A) Henry Morton Stanley", "B) Roger Casement", "C) Joseph Conrad", "D) Mark Twain"],
+                        correta: 'b',
+                        explicacao: "Roger Casement expôs as atrocidades ao mundo, forçando Leopoldo II a ceder o Congo."
+                    },
+                    {
+                        pergunta: "Em que ano o Congo conquistou sua independência?",
+                        opcoes: ["A) 1945", "B) 1952", "C) 1960", "D) 1975"],
+                        correta: 'c',
+                        explicacao: "Em 1960, Patrice Lumumba declarou a independência do Congo."
+                    }
+                ];
+                
+                let questaoAtual = 0;
+                let pontuacao = 0;
+                let quizRespondido = false;
+                
+                function carregarQuestao() {
+                    const questao = questoes[questaoAtual];
+                    document.getElementById("pergunta").innerHTML = "<strong>" + questao.pergunta + "</strong>";
+                    document.getElementById("numero-questao").textContent = questaoAtual + 1;
+                    
+                    const progresso = ((questaoAtual + 1) / questoes.length) * 100;
+                    document.getElementById("barra-progresso").style.width = progresso + "%";
+                    
+                    const divOpcoes = document.getElementById("opcoes-quiz");
+                    divOpcoes.innerHTML = ""; 
+                    
+                    questao.opcoes.forEach((textoOpcao, index) => {
+                        const botao = document.createElement("button");
+                        botao.className = "opcao-quiz";
+                        botao.textContent = textoOpcao;
+                       
+                        const letraOpcao = String.fromCharCode(97 + index); 
+                        botao.onclick = () => verificarResposta(letraOpcao);
+                        divOpcoes.appendChild(botao);
+                    });
+                    
+                    document.getElementById("resultado").style.display = "none";
+                    quizRespondido = false;
+                }
+                
+                function verificarResposta(opcao) {
+                    if (quizRespondido) return;
+                    quizRespondido = true;
+                    
+                    const questao = questoes[questaoAtual];
+                    const resultado = document.getElementById("resultado");
+                    const botoes = document.querySelectorAll(".opcao-quiz");
+                    
+                    // Converte letras para índices
+                    const indexEscolhido = opcao.charCodeAt(0) - 97;
+                    const indexCorreto = questao.correta.charCodeAt(0) - 97;
+                    
+                    // Desabilita todos
+                    botoes.forEach(b => {
+                        b.disabled = true;
+                        b.style.opacity = "0.5";
+                    });
+                    
+                    
+                    botoes[indexCorreto].style.background = "#000";
+                    botoes[indexCorreto].style.color = "#fff";
+                    botoes[indexCorreto].style.borderColor = "#000";
+                    botoes[indexCorreto].style.opacity = "1";
+                    
+                
+                    if (indexEscolhido !== indexCorreto) {
+                        botoes[indexEscolhido].style.background = "#ddd";
+                        botoes[indexEscolhido].style.textDecoration = "line-through";
+                        botoes[indexEscolhido].style.opacity = "1";
+                    }
+                    
+                    resultado.style.display = "block";
+                    let textoFeedback = opcao === questao.correta 
+                        ? "<strong style='color:#000'>CORRETO.</strong>" 
+                        : "<strong style='color:#555'>INCORRETO.</strong>";
+                    
+                    if (opcao === questao.correta) pontuacao++;
+                    
+                    resultado.innerHTML = textoFeedback + " " + questao.explicacao + "<br><button onclick='proximaQuestao()' class='botao-acao'>AVANÇAR</button>";
+                }
+                
+                function proximaQuestao() {
+                    questaoAtual++;
+                    if (questaoAtual < questoes.length) {
+                        carregarQuestao();
+                    } else {
+                        mostrarPlacarFinal();
+                    }
+                }
+                
+                function mostrarPlacarFinal() {
+                    document.getElementById("conteudo-quiz").style.display = "none";
+                    document.getElementById("resultado").style.display = "none";
+                    
+                    document.getElementById("placar-final").style.display = "block";
+                    document.getElementById("pontuacao-final").textContent = pontuacao;
+                    
+                    let msg = "";
+                    if (pontuacao === 5) msg = "Desempenho Excelente.";
+                    else if (pontuacao >= 3) msg = "Bom desempenho.";
+                    else msg = "Necessita revisão do conteúdo.";
+                    document.getElementById("mensagem-final").textContent = msg;
+                }
+                
+                function reiniciarQuizCompleto() {
+                    questaoAtual = 0;
+                    pontuacao = 0;
+                    document.getElementById("conteudo-quiz").style.display = "block";
+                    document.getElementById("placar-final").style.display = "none";
+                    carregarQuestao();
+                }
+                
+               
+                window.addEventListener('load', carregarQuestao);
+            </script>
+
+    </body>
+</html>
